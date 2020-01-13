@@ -28,6 +28,12 @@ Score: <span id="score">0</span></div>
 </ol>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script id="rendered-js">
+setInterval(upTime, 1000);
+function upTime(){
+  let theTime = Number($("#theTime").text());
+  theTime = theTime + 1;
+  $('#theTime').text(theTime);
+}//end upTime
 $("input").change(onChange);
 function onChange(evt){
   let correct = $(this).data("correct");
